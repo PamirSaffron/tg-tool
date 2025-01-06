@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two icons per row */
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card i {
+            font-size: 50px;
+            color: #007bff;
+        }
+        .card h3 {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .card p {
+            color: #555;
+        }
+        .card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Search Bar Styling (similar to Google) */
+        .search-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .search-container input {
+            padding: 15px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 18px;
+            border: 1px solid #dfe1e5;
+            border-radius: 50px;
+            outline: none;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .search-container input:focus {
+            box-shadow: 0 4px 16px rgba(32, 33, 36, 0.28);
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr 1fr; /* Two icons per row on small screens */
+                gap: 15px;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Mini App Features</h1>
+        <p>Explore the features below!</p>
+    </div>
+
+    <!-- Google Search Bar at the Top -->
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search Google" required />
+        </form>
+    </div>
+
+    <!-- Container with Two Icons per Row and Six Cards Total -->
+    <div class="container">
+        <!-- Google Search Card (Removed from here since it's already at the top) -->
+
+        <!-- ChatGPT Button Card -->
+        <div class="card">
+            <i class="fas fa-robot"></i>
+            <h3>Visit ChatGPT</h3>
+            <p>Link to ChatGPT.com for AI conversations.</p>
+            <button onclick="window.open('https://www.chatgpt.com', '_blank')">Go to ChatGPT</button>
+        </div>
+
+        <!-- Translator Card -->
+        <div class="card">
+            <i class="fas fa-language"></i>
+            <h3>Translator</h3>
+            <p>Translate text into multiple languages.</p>
+            <button onclick="location.href='translator.html'">Open</button>
+        </div>
+
+        <!-- Placeholder for Additional Features -->
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>More Features</h3>
+            <p>Placeholder for future features.</p>
+            <button>Coming Soon</button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-cogs"></i>
+            <h3>Settings</h3>
+            <p>Configure your preferences.</p>
+            <button>Coming Soon</button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-info-circle"></i>
+            <h3>About Us</h3>
+            <p>Learn more about our services.</p>
+            <button>Coming Soon</button>
+        </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <div class="nav-links">
+        <a href="index.html">Home</a> | 
+        <a href="translator.html">Translator</a>
+    </div>
+
+</body>
+</html>
